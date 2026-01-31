@@ -2,7 +2,7 @@ import requests
 import json
 import time
 from datetime import datetime
-from IPython.display import clear_output
+#from IPython.display import clear_output
 
 # ================== CONFIG ==================
 
@@ -226,7 +226,7 @@ def main():
 
         intentos += 1
         if intentos % 10 == 0:
-            clear_output(wait=True)
+            #clear_output(wait=True)
             print("🧹 Salida limpiada automáticamente\n")
 
         print(f"⏳ Esperando {INTERVALO} segundos...\n")
