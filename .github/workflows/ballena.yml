@@ -16,7 +16,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -25,3 +25,11 @@ jobs:
       - name: Run monitor
         run: |
           python BallenaMomentum.py
+
+      - name: Commit state files
+        run: |
+          git config user.name "ballena-bot"
+          git config user.email "bot@github.com"
+          git add *.json
+          git diff --cached --quiet || git commit -m "update bot state"
+          git push
