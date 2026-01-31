@@ -2,8 +2,6 @@ import requests
 import json
 from datetime import datetime
 
-WALLET = "0x5b5d51203a0f9079f8aeb098a6523a13f298c060"
-URL = "https://api.hyperliquid.xyz/info"
 
 VENTANA_SEGUNDOS = 60
 SIZE_MINIMO = 1.0
